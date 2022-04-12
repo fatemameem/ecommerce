@@ -19,14 +19,20 @@ const Shop = () => {
   };
   return (
     <div>
-      {products.map((product) => (
-        <Product
-          key={product.id}
-          product={product}
-          handleAddToCart={addToCart}
-        ></Product>
-      ))}
-      <Cart cart={cart}></Cart>
+      <div className="shop-container">
+        <div className="products-container">
+          {products.map((product) => (
+            <Product
+              key={product.id}
+              product={product}
+              handleAddToCart={addToCart}
+            ></Product>
+          ))}
+        </div>
+        <div className="cart-container">
+          <Cart cart={cart}></Cart>
+        </div>
+      </div>
     </div>
   );
 };

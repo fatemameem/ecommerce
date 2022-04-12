@@ -3,8 +3,9 @@ import "./Cart.css";
 
 const Cart = (props) => {
   return (
-    <div>
-      <p>{props.cart.length}</p>
+    <div className="cart">
+      <h4>Order Summary</h4>
+      <p>Selected Items: {props.cart.length}</p>
     </div>
   );
 };
